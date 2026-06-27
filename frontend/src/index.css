@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans:    'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* ── Black / Charcoal / White Palette ── */
+  --bg-deep:      #000000;
+  --bg-surface:   rgba(18, 18, 18, 0.95);
+  --bg-card:      rgba(24, 24, 24, 0.80);
+  --bg-active:    rgba(36, 36, 36, 0.90);
+  --glass-bg:     rgba(255, 255, 255, 0.04);
+
+  --border-light: rgba(255, 255, 255, 0.09);
+  --border-glow:  rgba(255, 255, 255, 0.18);
+
+  --color-text-primary:   #ffffff;
+  --color-text-secondary: #9ca3af;
+  --color-text-muted:     #4b5563;
+
+  /* Accent — keep neon pops on monochrome base */
+  --neon-cyan:   #00d4ff;
+  --neon-blue:   #6ea8fe;
+  --neon-green:  #00e5a0;
+  --neon-amber:  #ffb938;
+  --neon-rose:   #ff4d6d;
+  --neon-purple: #c084fc;
+
+  --glow-cyan:  0 0 28px rgba(0, 212, 255, 0.35);
+  --glow-green: 0 0 28px rgba(0, 229, 160, 0.35);
+  --glow-rose:  0 0 28px rgba(255, 77, 109, 0.35);
+
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Pure flat black background with no colored glows */
+body::before {
+  display: none;
+}
+
+/* Crisp grey/white grid overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,212,255,0.25); }
