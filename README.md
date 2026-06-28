@@ -1,4 +1,6 @@
 OVERVIEW
+
+
 AI Investment Research Agent
 The AI Investment Research Agent is an intelligent web application that helps users evaluate whether a company is a suitable investment opportunity. Instead of providing only basic financial information, the application performs AI-driven research, analyzes multiple aspects of a company, and generates a clear investment recommendation along with detailed reasoning.
 Users simply enter the name of a company, and the system automatically gathers relevant information, including the company's business profile, financial performance, market position, recent news, and potential risks. This information is then processed by an AI agent built using LangGraph and LangChain, which reasons over the collected data and determines whether the company should be considered for investment.
