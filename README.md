@@ -67,6 +67,7 @@ Live Application
 **********************************************************************************************************************************************************************************
 
 How It Works
+
 Approach
 The AI Investment Research Agent is designed as an intelligent, AI-driven application that assists users in researching companies and making informed investment decisions.
 Rather than displaying only financial metrics, the application combines structured AI reasoning with an interactive conversational interface to provide a more comprehensive
